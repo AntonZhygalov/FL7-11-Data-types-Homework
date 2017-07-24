@@ -39,6 +39,7 @@ function getTopNRichestNames(number, obj) {
     newObj.sort(function(a, b) {
         return a.income < b.income;
     });
+    newObj = newObj.slice(0, number);
 
-    return pluckByAttribute(newObj.slice(0, number), 'name');
+    return pluckByAttribute(newObj, 'name');
 }
