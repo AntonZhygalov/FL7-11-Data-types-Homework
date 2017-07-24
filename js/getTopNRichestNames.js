@@ -24,10 +24,8 @@ function pluckByAttribute(obj, label) {
 
 function getTopNRichestNames(number, obj) {
     var newObj = obj.map(function(a) {
-        var str1 = a.income;
-        str1 = str1.slice(0, -1);
-        var str2 = a.income;
-        str2 = str2.slice(-1);
+        var str1 = a.income.slice(0, -1);
+        var str2 = a.income.slice(-1);
         if (str2 === 'B') {
             a.income = str1 * 1e9;
         } else if (str2 === 'M') {
