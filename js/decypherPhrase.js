@@ -24,8 +24,8 @@ function cypherPhrase(obj, str) {
 
 function decypherPhrase(obj, str) {
     var newObj = {};
-    for (var prop in obj) {
-        newObj[obj[prop]] = prop;
+    for (var key in obj) {
+        newObj[obj[key]] = key;
     }
     return cypherPhrase(newObj, str);
 }
